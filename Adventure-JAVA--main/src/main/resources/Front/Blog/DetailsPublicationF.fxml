@@ -14,6 +14,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -90,17 +91,160 @@
     <center>
         <Pane prefHeight="425.0" prefWidth="473.0" BorderPane.alignment="CENTER">
             <children>
-                <TextArea fx:id="AreaComment" layoutX="45.0" layoutY="329.0" prefHeight="61.0" prefWidth="303.0" promptText="Ajouter votre commentaire" />
-                <Button layoutX="366.0" layoutY="347.0" mnemonicParsing="false" onAction="#AddCommentaire" prefHeight="25.0" prefWidth="83.0" styleClass="round-layout" text="ADD" textFill="#000000ab">
+                <TextArea fx:id="AreaComment" layoutX="44.0" layoutY="390.0" prefHeight="35.0" prefWidth="303.0" promptText="Ajouter votre commentaire" />
+                <Button layoutX="356.0" layoutY="396.0" mnemonicParsing="false" onAction="#AddCommentaire" prefHeight="25.0" prefWidth="83.0" styleClass="round-layout" text="ADD" textFill="#000000ab">
                     <font>
                         <Font name="System Bold Italic" size="12.0" />
                     </font></Button>
-                <ListView fx:id="ListComment" layoutX="45.0" layoutY="410.0" prefHeight="96.0" prefWidth="303.0" />
+                <ListView fx:id="ListComment" layoutX="45.0" layoutY="438.0" prefHeight="92.0" prefWidth="303.0" />
                 <Label fx:id="titre" layoutX="21.0" layoutY="25.0" prefHeight="31.0" prefWidth="119.0" styleClass="white-background" text="titre" />
                 <Label fx:id="date" layoutX="397.0" layoutY="79.0" prefHeight="17.0" prefWidth="110.0" text="date" />
                 <Label fx:id="contenu" layoutX="379.0" layoutY="121.0" prefHeight="115.0" prefWidth="176.0" style="-fx-background-color: #FFA500;" text="Contenu" />
                 <ImageView fx:id="imageView" fitHeight="183.0" fitWidth="329.0" layoutX="32.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" />
-                <Button layoutX="393.0" layoutY="28.0" mnemonicParsing="false" onAction="#userCommentaire" styleClass="round-layout" text="Mes commentaire" />
+            <StackPane alignment="CENTER_LEFT" layoutX="11.0" layoutY="264.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <HBox alignment="CENTER" spacing="5.0">
+                           <children>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../../../Downloads/Compressed/Facebook-Post-Reactions-main/Facebook-Post-Reactions-main/Facebook/src/img/ic_like.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../../../Downloads/Compressed/Facebook-Post-Reactions-main/Facebook-Post-Reactions-main/Facebook/src/img/ic_love_.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../../../Downloads/Compressed/Facebook-Post-Reactions-main/Facebook-Post-Reactions-main/Facebook/src/img/ic_care.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="nbReactions" maxWidth="1.7976931348623157E308" textFill="#606266">
+                                 <font>
+                                    <Font name="Segoe UI Historic" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Pane prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                        <Label fx:id="nbComments" textFill="#606266">
+                           <font>
+                              <Font name="Segoe UI Historic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nbShares" textFill="#606266">
+                           <font>
+                              <Font name="Segoe UI Historic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="reactionsContainer" maxWidth="-Infinity" styleClass="reactions-container">
+                     <children>
+                        <ImageView fx:id="imgLike" fitHeight="50.0" fitWidth="50.0" onMousePressed="#onReactionImgPressed" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/Compressed/Facebook-Post-Reactions-main/Facebook-Post-Reactions-main/Facebook/src/img/ic_like.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgLove" fitHeight="50.0" fitWidth="50.0" onMousePressed="#onReactionImgPressed" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/Compressed/Facebook-Post-Reactions-main/Facebook-Post-Reactions-main/Facebook/src/img/ic_love_.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgCare" fitHeight="50.0" fitWidth="50.0" onMousePressed="#onReactionImgPressed" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/Compressed/Facebook-Post-Reactions-main/Facebook-Post-Reactions-main/Facebook/src/img/ic_care.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgHaha" fitHeight="50.0" fitWidth="50.0" onMousePressed="#onReactionImgPressed" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/Compressed/Facebook-Post-Reactions-main/Facebook-Post-Reactions-main/Facebook/src/img/ic_haha.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgWow" fitHeight="50.0" fitWidth="50.0" onMousePressed="#onReactionImgPressed" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/Compressed/Facebook-Post-Reactions-main/Facebook-Post-Reactions-main/Facebook/src/img/ic_wow.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgSad" fitHeight="50.0" fitWidth="50.0" onMousePressed="#onReactionImgPressed" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/Compressed/Facebook-Post-Reactions-main/Facebook-Post-Reactions-main/Facebook/src/img/ic_sad.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgAngry" fitHeight="50.0" fitWidth="50.0" onMousePressed="#onReactionImgPressed" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/Compressed/Facebook-Post-Reactions-main/Facebook-Post-Reactions-main/Facebook/src/img/ic_angry.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <StackPane.margin>
+                        <Insets left="10.0" />
+                     </StackPane.margin>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </StackPane>
+            <HBox layoutX="21.0" layoutY="321.0" maxWidth="1.7976931348623157E308" styleClass="top-border" stylesheets="@/Front/Blog/styles.css">
+               <children>
+                  <HBox fx:id="likeContainer" alignment="CENTER" onMousePressed="#onLikeContainerPressed" onMouseReleased="#onLikeContainerMouseReleased" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fx:id="imgReaction" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/Compressed/Facebook-Post-Reactions-main/Facebook-Post-Reactions-main/Facebook/src/img/ic_like_outline.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="reactionName" text="Like" textFill="#606266">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/Compressed/Facebook-Post-Reactions-main/Facebook-Post-Reactions-main/Facebook/src/img/ic_comment.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Comment" textFill="#606266">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/Compressed/Facebook-Post-Reactions-main/Facebook-Post-Reactions-main/Facebook/src/img/ic_share.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Share" textFill="#606266">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </HBox>
             </children>
         </Pane>
     </center>

@@ -41,5 +41,7 @@
       <Button layoutX="506.0" layoutY="344.0" mnemonicParsing="false" onAction="#supprimerPublication" text="supprimer" />
       <Button layoutX="424.0" layoutY="344.0" mnemonicParsing="false" onAction="#modifierpublication" text="modifier" />
        <Button layoutX="348.0" layoutY="344.0" mnemonicParsing="false" onAction="#addpublication" prefHeight="26.0" prefWidth="61.0" text="ajouter" />
+      <Button layoutX="252.0" layoutY="344.0" mnemonicParsing="false" onAction="#AfficherCommentaire" prefHeight="26.0" prefWidth="77.0" text="comment" />
+       <Button layoutX="55.0" layoutY="344.0" onAction="#downloadPdfButtonClicked" prefHeight="78.0" prefWidth="157.0" text="Download PDF" />
    </children>
 </AnchorPane>

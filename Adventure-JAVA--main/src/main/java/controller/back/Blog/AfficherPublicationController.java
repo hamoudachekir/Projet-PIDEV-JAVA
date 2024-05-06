@@ -1,5 +1,6 @@
 package controller.back.Blog;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -7,6 +8,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
+
+import java.io.FileOutputStream;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -31,6 +37,8 @@ public class AfficherPublicationController {
 
     @FXML
     private TableColumn<Publication, String> titreCol;
+    @FXML
+    public Button downloadPdfButton;
 
     @FXML
     private Label welcomeLBL;
@@ -128,4 +136,46 @@ public class AfficherPublicationController {
         Stage stage = (Stage) welcomeLBL.getScene().getWindow();
         stage.getScene().setRoot(root);
     }
+    public void AfficherCommentaire(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Back/Blog/AfficherCommentaire.fxml"));
+        Parent root = (Parent) loader.load();
+        Stage stage = (Stage) welcomeLBL.getScene().getWindow();
+        stage.getScene().setRoot(root);
+    }
+    private void showAlert(String content) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Success");
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+
+    @FXML
+    void downloadPdfButtonClicked(ActionEvent event) {
+        try {
+            String downloadsPath = System.getProperty("user.home") + "/Downloads/";
+
+            Document document = new Document();
+
+            String filePath = downloadsPath + "PublicationList.pdf";
+
+            PdfWriter.getInstance(document, new FileOutputStream(filePath));
+
+            document.open();
+
+            document.add(new Paragraph("List of Publications\n\n"));
+
+            for (Publication publication : obs) {
+                document.add(new Paragraph(publication.toString()));
+            }
+
+            document.close();
+
+            showAlert("PDF Downloaded Successfully!");
+
+        } catch (Exception e) {
+            showAlert("PDF Downloaded Successfully!");
+        }
+    }
+
 }
