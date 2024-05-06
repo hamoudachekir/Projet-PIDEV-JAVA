@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -29,7 +30,7 @@
                     </font>
                 </Label>
                 <Line endX="86.59999084472656" layoutX="107.0" layoutY="218.0" startX="-90.99998474121094" startY="-0.600006103515625" stroke="WHITE" />
-                <ChoiceBox layoutX="50.0" layoutY="238.0" prefHeight="25.0" prefWidth="150.0">
+                <ChoiceBox layoutX="18.0" layoutY="238.0" prefHeight="26.0" prefWidth="159.0">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
                             <String fx:value="Publications" />
@@ -57,11 +58,12 @@
         </Pane>
                   <!-- Replace with actual logo icon -->
 
-          <Label layoutX="74.0" layoutY="242.0" prefHeight="22.0" prefWidth="45.0" text="Blog" textFill="#514f4f">
+          <Label layoutX="129.0" layoutY="240.0" prefHeight="22.0" prefWidth="45.0" text="Blog" textFill="#514f4f">
               <font>
                   <Font name="System Bold Italic" size="15.0" />
               </font>
           </Label>
+                <TextField fx:id="searchTextField" layoutX="12.0" layoutY="175.0" prefHeight="26.0" prefWidth="186.0" promptText="Search" styleClass="round-layout" />
     </children>
 </AnchorPane>
     </children>

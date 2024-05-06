@@ -87,4 +87,25 @@ public class CommentaireService {
         }
         return null;
     }
+    public int getTotalComments() throws SQLException {
+        String sql = "SELECT COUNT(*) FROM commentaire";
+        try (Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(sql)) {
+            if (resultSet.next()) {
+                return resultSet.getInt(1);
+            }
+        }
+        return 0; // Return 0 if there are no comments or an error occurs
+    }
+
+    public int getActiveCommentsCount() throws SQLException {
+        String sql = "SELECT COUNT(*) FROM commentaire WHERE active = true";
+        try (Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(sql)) {
+            if (resultSet.next()) {
+                return resultSet.getInt(1);
+            }
+        }
+        return 0; // Return 0 if there are no active comments or an error occurs
+    }
 }

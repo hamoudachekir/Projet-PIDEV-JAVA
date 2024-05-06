@@ -2,19 +2,20 @@ package controller.front.Blog;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import model.Blog.Publication;
 import service.Blog.PublicationService;
-import javafx.scene.layout.AnchorPane;
-import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
+
 import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -24,6 +25,9 @@ public class AfficherPublicationFrontController {
 
     @FXML
     private FlowPane publicationFlowPane;
+
+    @FXML
+    private TextField searchTextField;
 
     private PublicationService ps = new PublicationService();
 
@@ -39,6 +43,12 @@ public class AfficherPublicationFrontController {
         } catch (SQLException e) {
             System.err.println("Error loading products: " + e.getMessage());
         }
+
+        // Add listener to the searchTextField
+        searchTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            // Call a method to filter publication list based on the search text
+            filterPublicationList(newValue);
+        });
     }
 
     private AnchorPane createPublicationCard(Publication publication) {
@@ -80,7 +90,7 @@ public class AfficherPublicationFrontController {
         Button detailsButton = new Button("Détails");
         detailsButton.setLayoutX(15);
         detailsButton.setLayoutY(275);
-        detailsButton.setOnAction((ActionEvent event) -> {
+        detailsButton.setOnAction((event) -> {
             try {
                 DetailsController.pub = publication;
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/Front/Blog/DetailsPublicationF.fxml"));
@@ -101,5 +111,30 @@ public class AfficherPublicationFrontController {
         return card;
     }
 
+    // Method to filter publication list based on search text
+    private void filterPublicationList(String searchText) {
+        for (Node node : publicationFlowPane.getChildren()) {
+            if (node instanceof AnchorPane) {
+                AnchorPane card = (AnchorPane) node;
+                boolean isVisible = false;
 
+                // Iterate over the children of the card to find the label containing the publication title
+                for (Node child : card.getChildren()) {
+                    if (child instanceof Label) {
+                        Label label = (Label) child;
+                        // Check if this label represents the publication title
+                        if (label.getStyleClass().contains("publication-titre")) {
+                            // Check if the publication title contains the search text
+                            isVisible = label.getText().toLowerCase().contains(searchText.toLowerCase());
+                            break; // No need to continue iterating
+                        }
+                    }
+                }
+
+                // Set visibility of the card based on whether its title contains the search text
+                card.setVisible(isVisible);
+                card.setManaged(isVisible);
+            }
+        }
+    }
 }

@@ -10,16 +10,22 @@ import javafx.scene.image.ImageView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import model.Blog.Commentaire;
 import model.Blog.Publication;
 import service.Blog.CommentaireService;
+import service.Blog.MailService;
 import service.Blog.PublicationService;
 
+import javax.mail.MessagingException;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class DetailsController implements Initializable {
     @FXML
@@ -97,15 +103,35 @@ public class DetailsController implements Initializable {
     @FXML
     void AddCommentaire() {
         CommentaireService comServ = new CommentaireService();
+        MailService mailService = new MailService();
+        String filteredComment = filterBadWords(AreaComment.getText());
         try {
-            comServ.add(new Commentaire(pub, 1, AreaComment.getText()));
+            comServ.add(new Commentaire(pub, 1, filteredComment));
             System.out.println("comment added");
             System.out.println(comServ.select());
-        } catch (SQLException e) {
+            mailService.sendEmail("hamoudachkir@yahoo.fr");
+        } catch (SQLException | MessagingException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
+
+    private String filterBadWords(String comment) {
+        String[] badWords = {"badword1", "badword2", "badword3"};
+
+        String regexPattern = "\\b(" + String.join("|", badWords) + ")\\b";
+        Pattern pattern = Pattern.compile(regexPattern, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(comment);
+        StringBuffer stringBuffer = new StringBuffer();
+        while (matcher.find()) {
+            matcher.appendReplacement(stringBuffer, "*".repeat(matcher.group().length()));
+        }
+        matcher.appendTail(stringBuffer);
+
+        return stringBuffer.toString();
+    }
+
 
     @FXML
     void userCommentaire() {
@@ -115,5 +141,15 @@ public class DetailsController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         afficherPublication();
+    }
+
+    public void onReactionImgPressed(MouseEvent mouseEvent) {
+    }
+
+    public void onLikeContainerPressed(MouseEvent mouseEvent) {
+    }
+
+    public void onLikeContainerMouseReleased(MouseEvent mouseEvent) {
+
     }
 }
