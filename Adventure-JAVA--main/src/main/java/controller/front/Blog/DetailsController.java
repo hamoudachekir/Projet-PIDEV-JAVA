@@ -1,6 +1,7 @@
 package controller.front.Blog;
 
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -11,12 +12,15 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
 import model.Blog.Commentaire;
 import model.Blog.Publication;
+
 import service.Blog.CommentaireService;
 import service.Blog.MailService;
 import service.Blog.PublicationService;
-
+import javafx.scene.control.Button;
 import javax.mail.MessagingException;
 import java.io.IOException;
 import java.net.URL;
@@ -51,8 +55,26 @@ public class DetailsController implements Initializable {
     @FXML
     private TextArea AreaComment;
     public static Publication pub;
+    @FXML
+    private Label reactionName;
+    @FXML
+    private HBox commentContainer;
 
+    @FXML
+    private Label nbReactions;
+
+
+    @FXML
+    private ImageView imgReaction;
+
+    @FXML
+    private HBox reactionsContainer;
+
+    @FXML
+    private ImageView imgLike;
+    private long startTime = 0;
     private Publication publication;
+    private int likesCount = pub.getLikes();
     public void setContenu(String contenu) {
         contenuLabel.setText(contenu);
     }
@@ -69,7 +91,7 @@ public class DetailsController implements Initializable {
             titre.setText(pub.getTitre());
             date.setText(pub.getDatepub().toString());
             contenu.setText(pub.getContenu());
-
+            likesLabel.setText(String.valueOf(pub.getLikes()));
             String imageUrl = pub.getImage();
             if (imageUrl != null && !imageUrl.isEmpty()) {
                 Image image = new Image(imageUrl);
@@ -142,14 +164,21 @@ public class DetailsController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         afficherPublication();
     }
-
-    public void onReactionImgPressed(MouseEvent mouseEvent) {
+    @FXML
+    private Button likeButton;
+    @FXML
+    private Label likesLabel;
+    @FXML
+    void likeButtonClicked() throws SQLException {
+        // Increment the likes count
+        PublicationService pubServ = new PublicationService();
+        likesCount++;
+        pubServ.incrementLikes(pub.getId());
+        // Update the likesLabel text
+        likesLabel.setText(String.valueOf(pub.getLikes()+1));
     }
 
-    public void onLikeContainerPressed(MouseEvent mouseEvent) {
-    }
 
-    public void onLikeContainerMouseReleased(MouseEvent mouseEvent) {
 
-    }
+
 }

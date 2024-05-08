@@ -8,6 +8,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
+
+import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -166,7 +168,18 @@ public class AfficherPublicationController {
             document.add(new Paragraph("List of Publications\n\n"));
 
             for (Publication publication : obs) {
-                document.add(new Paragraph(publication.toString()));
+                // Format publication entry
+                Paragraph publicationParagraph = new Paragraph();
+                publicationParagraph.add(new Chunk("Title: "));
+                publicationParagraph.add(new Chunk(publication.getTitre() + "\n"));
+                publicationParagraph.add(new Chunk("Date: "));
+                publicationParagraph.add(new Chunk(publication.getDatepub().toString() + "\n"));
+                publicationParagraph.add(new Chunk("Content: "));
+                publicationParagraph.add(new Chunk(publication.getContenu() + "\n"));
+
+                publicationParagraph.setIndentationLeft(20);
+                document.add(publicationParagraph);
+                document.add(Chunk.NEWLINE);
             }
 
             document.close();

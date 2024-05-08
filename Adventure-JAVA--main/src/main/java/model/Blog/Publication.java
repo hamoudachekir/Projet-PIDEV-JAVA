@@ -7,15 +7,26 @@ public class Publication {
     private String image ;
     private Date datepub ;
     private String titre ;
+    private int totalReactions;
+    private int likes;
 
     public Publication() {
     }
 
-    public Publication( String contenu, String image, String titre) {
+    public Publication( String contenu, String image, String titre,int likes) {
         this.contenu = contenu;
         this.image = image;
         this.datepub = new Date();
         this.titre = titre;
+        this.likes = likes;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
     }
 
     public int getId() {
@@ -45,7 +56,13 @@ public class Publication {
     public java.util.Date getDatepub() {
         return (java.util.Date) datepub;
     }
+    public int getTotalReactions() {
+        return totalReactions;
+    }
 
+    public void setTotalReactions(int totalReactions) {
+        this.totalReactions = totalReactions;
+    }
     public java.util.Date setDatepub(java.util.Date datepub) {
         this.datepub = new Date();;
         return null;
@@ -67,6 +84,7 @@ public class Publication {
                 ", image='" + image + '\'' +
                 ", datepub=" + datepub +
                 ", titre='" + titre + '\'' +
+                ", likes='" + likes + '\''+
                 '}';
     }
 

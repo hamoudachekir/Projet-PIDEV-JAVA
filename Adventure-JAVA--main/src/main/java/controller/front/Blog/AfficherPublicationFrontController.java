@@ -35,7 +35,7 @@ public class AfficherPublicationFrontController {
     public void initialize() {
         try {
             List<Publication> publicationsList = ps.select();
-
+            System.out.println(publicationsList);
             for (Publication publication : publicationsList) {
                 AnchorPane card = createPublicationCard(publication);
                 publicationFlowPane.getChildren().add(card);
