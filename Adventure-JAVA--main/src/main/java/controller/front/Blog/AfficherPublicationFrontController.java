@@ -103,7 +103,7 @@ public class AfficherPublicationFrontController {
 
                 stage.show();
             } catch (IOException e) {
-                System.out.println(e.getMessage());
+                System.out.println("ttt"+e.getMessage());
             }
         });
 
