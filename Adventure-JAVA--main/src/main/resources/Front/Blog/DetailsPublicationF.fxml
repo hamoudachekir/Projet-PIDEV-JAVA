@@ -92,9 +92,9 @@
                     </font></Button>
                 <ListView fx:id="ListComment" layoutX="45.0" layoutY="438.0" prefHeight="92.0" prefWidth="303.0" />
                 <Label fx:id="titre" layoutX="21.0" layoutY="25.0" prefHeight="31.0" prefWidth="119.0" styleClass="white-background" text="titre" />
-                <Label fx:id="date" layoutX="397.0" layoutY="79.0" prefHeight="17.0" prefWidth="110.0" text="date" />
-                <Label fx:id="contenu" layoutX="379.0" layoutY="121.0" prefHeight="115.0" prefWidth="176.0" style="-fx-background-color: #FFA500;" text="Contenu" />
-                <ImageView fx:id="imageView" fitHeight="172.0" fitWidth="329.0" layoutX="32.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" />
+                <Label fx:id="date" layoutX="413.0" layoutY="32.0" prefHeight="17.0" prefWidth="110.0" text="date" />
+                <Label fx:id="contenu" alignment="TOP_LEFT" layoutX="341.0" layoutY="80.0" prefHeight="156.0" prefWidth="214.0" style="-fx-background-color: #FFA500;" text="Contenu" wrapText="true" />
+                <ImageView fx:id="imageView" fitHeight="172.0" fitWidth="287.0" layoutX="32.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" />
                 <!-- Add this button and label to your FXML file -->
                 <Button fx:id="likeButton" layoutX="32.0" layoutY="260.0" onAction="#likeButtonClicked" style="-fx-background-color: f8f8f8;">
                <graphic>
@@ -103,8 +103,14 @@
                         <Image url="@ic_love_.png" />
                      </image>
                   </ImageView>
-               </graphic></Button>
+               </graphic>
+                </Button>
                 <Label fx:id="likesLabel" layoutX="70.0" layoutY="264.0" prefHeight="17.0" prefWidth="21.0" text="" />
+                <Button fx:id="translateButton" layoutX="426.0" layoutY="252.0" mnemonicParsing="false" onAction="#Translate" prefHeight="25.0" prefWidth="83.0" styleClass="round-layout" text="Traduction" textFill="#000000ab">
+                    <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                    </font>
+                </Button>
 
             </children>
         </Pane>
