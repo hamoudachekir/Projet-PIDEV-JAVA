@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.back.Blog.StatisticsController">
+    <children>
+        <Label layoutX="248.0" layoutY="106.0" text="Statistics">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="182.0" layoutY="164.0" text="Total Comments:" />
+        <Label fx:id="totalCommentsLabel" layoutX="324.0" layoutY="164.0" />
+        <Label layoutX="182.0" layoutY="203.0" text="Active Comments:" />
+        <Label fx:id="activeCommentsLabel" layoutX="324.0" layoutY="203.0" />
+        <Label layoutX="182.0" layoutY="242.0" text="Inactive Comments:" />
+        <Label fx:id="inactiveCommentsLabel" layoutX="324.0" layoutY="242.0" />
+      <Button layoutX="481.0" layoutY="341.0" mnemonicParsing="false" onAction="#AfficherCommentaire" text="Back" />
+    </children>
+</AnchorPane>
