@@ -4,8 +4,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import model.User;
 
 import java.io.IOException;
 import java.net.URL;
@@ -16,7 +20,12 @@ import java.util.logging.Logger;
 public class HelloController implements Initializable {
 
     @FXML
+    private Button frontUserBtn;
+
+    @FXML
     private Button activities;
+    @FXML
+    private Button logoutB;
 
     @FXML
     private Button blogs;
@@ -29,11 +38,13 @@ public class HelloController implements Initializable {
 
     @FXML
     private Button shop;
-
+    User currentUser;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        currentUser = LoginController.getCurrentUser();
+        //System.out.println(currentUser.getRoles());
+        frontUserBtn.setOnAction(this::handleBtnUtilisateur);
         try {
             Parent fxml = FXMLLoader.load(getClass().getResource("/home.fxml"));
             contentArea.getChildren().removeAll();
@@ -47,6 +58,7 @@ public class HelloController implements Initializable {
     }
 
     public void home(javafx.event.ActionEvent actionEvent) throws IOException {
+
         Parent fxml = FXMLLoader.load(getClass().getResource("/home.fxml"));
         contentArea.getChildren().removeAll();
         contentArea.getChildren().setAll(fxml);
@@ -57,16 +69,46 @@ public class HelloController implements Initializable {
     }
 
     public void activities(javafx.event.ActionEvent actionEvent) throws IOException {
-        //FXMLLoader loader = new FXMLLoader(getClass().getResource("/activities.fxml"));
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/activitiesDashboard.fxml"));
-        Parent fxml = loader.load();
-        contentArea.getChildren().removeAll();
-        contentArea.getChildren().setAll(fxml);
+        String userRolesJson = currentUser.getRoles();
+        String expectedRoleJson = "{\"role\": \"client\"}";
+        if (userRolesJson.equals(expectedRoleJson)) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/activities.fxml"));
+            Parent fxml = loader.load();
+            contentArea.getChildren().removeAll();
+            contentArea.getChildren().setAll(fxml);
+        }else{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/activitiesDashboard.fxml"));
+            Parent fxml = loader.load();
+            contentArea.getChildren().removeAll();
+            contentArea.getChildren().setAll(fxml);
+        }
         activities.setStyle("-fx-background-color: #2A332D;-fx-text-fill:  #ffffff;");
         home.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         blogs.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         shop.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
     }
 
+    private void handleBtnUtilisateur(javafx.event.ActionEvent actionEvent) {
+        System.out.println("Redirecting to gestion utilisateur");
+        loadScene("/userFront.fxml");
+    }
+
+    private void loadScene(String fxmlFile) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));
+            Stage stage = new Stage();
+            stage.setTitle("Ziyara");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void logout(javafx.event.ActionEvent actionEvent) throws IOException {
+        Stage stage = (Stage) logoutB.getScene().getWindow();
+        stage.close();
+
+    }
 
 }

@@ -13,7 +13,7 @@
    <left>
       <Pane prefHeight="550.0" prefWidth="200.0" style="-fx-background-color: #1D231F;" BorderPane.alignment="CENTER">
          <children>
-            <VBox layoutY="68.0" prefHeight="306.0" prefWidth="200.0">
+            <VBox layoutY="68.0" prefHeight="483.0" prefWidth="200.0">
                <children>
                   <Button fx:id="home" graphicTextGap="10.0" mnemonicParsing="false" onAction="#home" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1D231F;" text="Acceuil" textFill="WHITE">
                      <font>
@@ -47,6 +47,26 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
+                  <Button fx:id="frontUserBtn" cancelButton="true" layoutX="10.0" layoutY="161.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1D231F;" text="My Account" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="231.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="logoutB" cancelButton="true" mnemonicParsing="false" onAction="#logout" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1D231F;" text="LogOut" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
                </children>
             </VBox>
          </children>

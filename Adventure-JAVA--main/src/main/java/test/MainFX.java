@@ -17,10 +17,11 @@ public class MainFX extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/hello-view.fxml"));
+            //FXMLLoader loader = new FXMLLoader(getClass().getResource("/hello-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/login.fxml"));
             Parent root = loader.load();
 
-            Scene scene = new Scene(root, 900, 550);
+            Scene scene = new Scene(root, 639, 400);
 
             Image icon = new Image(getClass().getResourceAsStream("/Front/Blog/2.png"));
             primaryStage.getIcons().add(icon);

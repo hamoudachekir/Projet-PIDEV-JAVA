@@ -39,7 +39,7 @@ public class ForgotPasswordController {
 
     @FXML
     private void initialize() {
-        email.setText("cyrine.boughzou@esprit.tn");
+        email.setText("");
         userService = new UserService();
 
     }

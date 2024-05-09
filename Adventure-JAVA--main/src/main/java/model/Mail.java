@@ -11,7 +11,7 @@ public class Mail {
 
 
     private static final String FROM_EMAIL = "mohamed.soua@esprit.tn"; // Change this to your email
-    private static final String PASSWORD = "ifpa hwif xjbc qvzb"; // Change this to your email password
+    private static final String PASSWORD = "samj xuzt mnak nrcn"; // Change this to your email password
 
     public static void send(String recipientEmail, String generatedCode) throws MessagingException {
         // Set up mail server properties

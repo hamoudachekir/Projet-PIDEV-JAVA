@@ -289,10 +289,11 @@ public class LoginController {
     @FXML
     void loadFront(String email) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/front.fxml"));
+            //FXMLLoader loader = new FXMLLoader(getClass().getResource("/front.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/hello-view.fxml"));
             Parent root = loader.load();
-            FrontController controller = loader.getController();
-            controller.displayEmail(email);
+            /*FrontController controller = loader.getController();
+            controller.displayEmail(email);*/
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.setTitle("Ziyara");
@@ -305,9 +306,9 @@ public class LoginController {
     @FXML
     void loadBack() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/back.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/hello-view.fxml"));
             Parent root = loader.load();
-            BackController controller = loader.getController();
+            //BackController controller = loader.getController();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.setTitle("Ziyara");
