@@ -1,5 +1,6 @@
 package controller.front.Blog;
 
+import com.dark.programs.speech.translator.GoogleTranslate;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -176,6 +177,11 @@ public class DetailsController implements Initializable {
         pubServ.incrementLikes(pub.getId());
         // Update the likesLabel text
         likesLabel.setText(String.valueOf(pub.getLikes()+1));
+    }
+    @FXML
+    void Translate(ActionEvent event) throws IOException {
+        String Newfeedtext = GoogleTranslate.translate("fr", contenu.getText());
+        contenu.setText(Newfeedtext);
     }
 
 
