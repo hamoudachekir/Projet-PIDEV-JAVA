@@ -95,7 +95,7 @@ public class CommentaireService {
                 return resultSet.getInt(1);
             }
         }
-        return 0; // Return 0 if there are no comments or an error occurs
+        return 0;
     }
 
     public int getActiveCommentsCount() throws SQLException {
@@ -106,6 +106,6 @@ public class CommentaireService {
                 return resultSet.getInt(1);
             }
         }
-        return 0; // Return 0 if there are no active comments or an error occurs
+        return 0;
     }
 }

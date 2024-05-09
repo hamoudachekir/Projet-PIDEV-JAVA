@@ -142,8 +142,30 @@ public class DetailsController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         afficherPublication();
     }
+<<<<<<< Updated upstream
 
     public void onReactionImgPressed(MouseEvent mouseEvent) {
+=======
+    @FXML
+    private Button likeButton;
+    @FXML
+    private Label likesLabel;
+    @FXML
+    void likeButtonClicked() throws SQLException {
+        // Increment the likes count
+        PublicationService pubServ = new PublicationService();
+        pubServ.incrementLikes(pub.getId());
+
+        // Update the likesLabel text
+        pub.setLikes(pub.getLikes() + 1);
+        likesLabel.setText(String.valueOf(pub.getLikes()));
+    }
+
+    @FXML
+    void Translate(ActionEvent event) throws IOException {
+        String Newfeedtext = GoogleTranslate.translate("fr", contenu.getText());
+        contenu.setText(Newfeedtext);
+>>>>>>> Stashed changes
     }
 
     public void onLikeContainerPressed(MouseEvent mouseEvent) {

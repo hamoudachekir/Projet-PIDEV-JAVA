@@ -44,9 +44,7 @@ public class AfficherPublicationFrontController {
             System.err.println("Error loading products: " + e.getMessage());
         }
 
-        // Add listener to the searchTextField
         searchTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            // Call a method to filter publication list based on the search text
             filterPublicationList(newValue);
         });
     }
@@ -111,27 +109,22 @@ public class AfficherPublicationFrontController {
         return card;
     }
 
-    // Method to filter publication list based on search text
     private void filterPublicationList(String searchText) {
         for (Node node : publicationFlowPane.getChildren()) {
             if (node instanceof AnchorPane) {
                 AnchorPane card = (AnchorPane) node;
                 boolean isVisible = false;
 
-                // Iterate over the children of the card to find the label containing the publication title
                 for (Node child : card.getChildren()) {
                     if (child instanceof Label) {
                         Label label = (Label) child;
-                        // Check if this label represents the publication title
                         if (label.getStyleClass().contains("publication-titre")) {
-                            // Check if the publication title contains the search text
                             isVisible = label.getText().toLowerCase().contains(searchText.toLowerCase());
-                            break; // No need to continue iterating
+                            break;
                         }
                     }
                 }
 
-                // Set visibility of the card based on whether its title contains the search text
                 card.setVisible(isVisible);
                 card.setManaged(isVisible);
             }

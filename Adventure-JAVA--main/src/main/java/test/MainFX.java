@@ -4,8 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
 import java.io.IOException;
 
 public class MainFX extends Application {
@@ -19,14 +19,20 @@ public class MainFX extends Application {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Back/Blog/AfficherPublication.fxml"));
             Parent root = loader.load();
-            Scene scene= new Scene(root);
+
+            Scene scene = new Scene(root, 800, 600);
+
+            Image icon = new Image(getClass().getResourceAsStream("/Front/Blog/2.png"));
+            primaryStage.getIcons().add(icon);
+
             primaryStage.setScene(scene);
-            primaryStage.setTitle("Gérer les publication");
+            primaryStage.setTitle("Adventure");
+
+            primaryStage.setResizable(false);
+
             primaryStage.show();
         } catch (IOException e) {
             System.out.println(e.getMessage());
-
         }
     }
 }
-

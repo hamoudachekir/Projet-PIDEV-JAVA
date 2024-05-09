@@ -58,7 +58,6 @@ public class FXMLDocumentController implements Initializable {
             VBox labelContainer = new VBox(10);
             labelContainer.setStyle("-fx-padding: 250 50 0 0;");
 
-            // Ajoutez le labelContainer à idsidebar
             idsidebar.getChildren().add(labelContainer);
 
             Button button = new Button("Afficher les labels");
