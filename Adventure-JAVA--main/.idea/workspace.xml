@@ -5,17 +5,86 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ce2e9e1-d4e1-4c4d-87da-db0bf06e5e90" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Activities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ActivitiesDashboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ActivityCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ActivityDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ActivityTableItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/CommentCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/CommentTableItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ImageSlider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ReservationTableItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ShowActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Wishlist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Activity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/ActivityImages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/FavActivitiy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/ActivityImagesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/ActivityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/FavActivityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/PdfGeneratorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/QrcodeGeneratorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/ReservationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/activities.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/activitiesDashboard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/activityCard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/activityDetails.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/activityTableItem.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/EmptyHeart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/Heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/aerostat-ballon-93675-132519-65eaa6abafd5b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/aerostat-ballon_93675-132519.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/beaux-poissons-nageant-autour-coraux-sous-mer-181624-10112-65eaa651f39fa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/bike-65d859c388a0f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/colore-chaud-fleurs-printanieres-nature-1172-185-65eaa6abb1171.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/femme-apnee-palmes-sous-eau-23-2148976490-65eaa65201aca.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/friends-sitting-near-bonfire-smiling-embracing-resting-playing-guitar-176420-4178-65eaa70d189c3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/hiker-stand-camping-near-orange-tent-backpack-mountains-1150-9161-65eaa70d1a1ee.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/hiking-65ddd1fe814df.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/hiking-65e9b710ecaa5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/homme-debout-son-bras-son-poing-leves-air-montgolfiere-volant-arriere-plan-181624-2112-65eaa6abb145d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/homme-nageant-sous-eau-pendant-journee-ensoleillee-181624-42142-65eaa65201de7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/homme-trekking-dans-montagnes-23-2148106701-65e9b710efaf2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/homme-trekking-dans-montagnes_23-2148106701.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/homme-trekking-dans-nature-23-2148106953-65ddd1fe929d1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/homme-trekking-dans-nature-23-2148106953-65e9b710effbb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/homme-trekking-dans-nature_23-2148106953.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/hommes-femmes-randonnant-ensemble-au-sommet-montagne-generes-par-ia-188544-31096-65e9b710ef45d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/kayak-65d859c38accf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/kayak2-65d859c38afee.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/man-tent-looking-campfire-23-2148301480-65eaa70d1a639.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/selfie-plongee-sous-marine-selfie-tourne-baton-selfie-mer-bleu-profond-prise-vue-grand-angle-1253-1537-65eaa652020a1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/tents-camping-site-kilimanjaro-mountain-181624-37110-65eaa70d1ab14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/test.jpg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/vol-montgolfiere-649448-666-65eaa6abb16cd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/currency.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/darkLocation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/email.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/email1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/email2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/emailTemplate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/hiking.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/location.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/commentCard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/commentTabItem.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/front.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hello-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/home.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/imageSlider.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/reservationTabItem.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/showActivity.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/styleActivities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/wishlist.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/back/Blog/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/back/Blog/StatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/front/Blog/DetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/front/Blog/DetailsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/test/MainFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/MainFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Back/Blog/statisticsCommentaire.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Back/Blog/statisticsCommentaire.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Front/Blog/DetailsPublicationF.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Front/Blog/DetailsPublicationF.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Back/Blog/statisticsCommentaire.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Back/Blog/statisticsCommentaire.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/back/Blog/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/back/Blog/StatisticsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/front/Blog/DetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/front/Blog/DetailsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/test/MainFX.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/MainFX.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
@@ -24,6 +93,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -47,6 +119,7 @@
     &quot;accountId&quot;: &quot;952ae610-782a-4768-843b-e3272130dda8&quot;
   }
 }</component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\php\php.exe" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -55,23 +128,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.Adventure [javafx:run].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;user+blog+product&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/manna/IdeaProjects/Projet-PIDEV-JAVA/Adventure-JAVA--main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.Adventure [javafx:run].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "user+blog+product+activities",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/manna/IdeaProjects/Projet-PIDEV-JAVA2/Adventure-JAVA--main/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\manna\IdeaProjects\Projet-PIDEV-JAVA2\Adventure-JAVA--main\src\main\resources" />
+      <recent name="C:\Users\manna\IdeaProjects\Projet-PIDEV-JAVA2\Adventure-JAVA--main\src\main\java\service" />
+      <recent name="C:\Users\manna\IdeaProjects\Projet-PIDEV-JAVA2\Adventure-JAVA--main\src\main\java\model" />
+      <recent name="C:\Users\manna\IdeaProjects\Projet-PIDEV-JAVA2\Adventure-JAVA--main\src\main\java\controller" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Adventure [javafx:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
@@ -112,8 +194,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -130,6 +212,7 @@
       <workItem from="1715172253675" duration="161000" />
       <workItem from="1715263431713" duration="491000" />
       <workItem from="1715264314511" duration="236000" />
+      <workItem from="1715277219914" duration="2711000" />
     </task>
     <servers />
   </component>
