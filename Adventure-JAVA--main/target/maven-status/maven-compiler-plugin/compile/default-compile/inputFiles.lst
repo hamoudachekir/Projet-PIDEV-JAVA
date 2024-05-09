@@ -1,20 +1,37 @@
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\front\Blog\AfficherPublicationFrontController.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\back\Blog\AfficherPublicationController.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\front\Blog\FXCardView.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\front\Blog\FXMLDocumentController.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\front\Blog\CustomerCard.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\model\Blog\Publication.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\back\Blog\ModifierPublicationController.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\back\Blog\StatisticsController.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\service\Blog\IService.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\test\MainFX.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\utils\MyDataBase.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\front\Blog\ListPublicationController.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\test\Main.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\model\Blog\Commentaire.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\service\Blog\CommentaireService.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\service\Blog\PublicationService.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\back\Blog\AddpublicationController.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\back\Blog\AfficherCommentaire.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\front\Blog\DetailsController.java
-C:\Users\mouda\Downloads\Compressed\Adventure-JAVA--main\git\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\service\Blog\MailService.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\service\UserService.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\front\Blog\FXCardView.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\service\IService.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\UserFrontController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\BackController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\TypeCurrentPasswordController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\test\Main.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\ForgotPasswordController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\service\statuserService.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\AddUserController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\updateUserFrontController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\back\Blog\AddpublicationController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\front\Blog\FXMLDocumentController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\UpdateUserController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\service\Blog\CommentaireService.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\service\Blog\IService.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\service\Blog\PublicationService.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\ResetPasswordController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\back\Blog\StatisticsController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\model\Blog\Commentaire.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\front\Blog\DetailsController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\front\Blog\AfficherPublicationFrontController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\front\Blog\ListPublicationController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\test\MainFX.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\back\Blog\ModifierPublicationController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\back\Blog\AfficherPublicationController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\back\Blog\AfficherCommentaire.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\utils\MyDataBase.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\FrontController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\LoginController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\front\Blog\CustomerCard.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\model\Blog\Publication.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\model\Statuser.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\controller\ShowUserController.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\model\User.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\model\Mail.java
+C:\Users\souam\OneDrive\Bureau\Nouveau dossier (2)\Projet-PIDEV-JAVA\Adventure-JAVA--main\src\main\java\service\Blog\MailService.java
