@@ -7,6 +7,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.User;
 import service.UserService;
@@ -30,6 +31,8 @@ public class AddUserController {
 
     @FXML
     private Button addUserBtn;
+
+    private AnchorPane pane;
 
     private final UserService userService = new UserService();
 
@@ -128,5 +131,9 @@ public class AddUserController {
 
 
 
+    }
+
+    public void setPane(AnchorPane mainPane) {
+        this.pane=mainPane;
     }
 }

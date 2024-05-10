@@ -47,7 +47,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="frontUserBtn" cancelButton="true" layoutX="10.0" layoutY="161.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1D231F;" text="My Account" textFill="WHITE">
+                  <Button fx:id="frontUserBtn" cancelButton="true" layoutX="10.0" layoutY="161.0" mnemonicParsing="false" onAction="#user" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1D231F;" text="My Account" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>

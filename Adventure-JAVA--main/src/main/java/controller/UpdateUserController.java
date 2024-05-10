@@ -8,6 +8,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.User;
 import service.UserService;
@@ -38,7 +39,7 @@ public class UpdateUserController {
     private ShowUserController showUserController;
 
     private final UserService userService = new UserService();
-
+    private AnchorPane pane;
 
 
     public void initialize() {
@@ -170,5 +171,9 @@ public class UpdateUserController {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    public void setPane(AnchorPane mainPane) {
+        this.pane=mainPane;
     }
 }

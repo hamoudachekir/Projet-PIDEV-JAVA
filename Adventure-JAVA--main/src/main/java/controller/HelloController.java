@@ -55,7 +55,6 @@ public class HelloController implements Initializable {
         if(userIsAdmin)
             usersButton.setVisible(true);
 
-        frontUserBtn.setOnAction(this::handleBtnUtilisateur);
         try {
             Parent fxml = FXMLLoader.load(getClass().getResource("/home.fxml"));
             contentArea.getChildren().removeAll();
@@ -78,12 +77,12 @@ public class HelloController implements Initializable {
         blogs.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         shop.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         usersButton.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        frontUserBtn.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
     }
 
     public void activities(javafx.event.ActionEvent actionEvent) throws IOException {
-        String userRolesJson = currentUser.getRoles();
-        String expectedRoleJson = "{\"role\": \"client\"}";
-        if (userRolesJson.equals(expectedRoleJson)) {
+
+        if (!userIsAdmin) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/activities.fxml"));
             Parent fxml = loader.load();
             contentArea.getChildren().removeAll();
@@ -99,6 +98,7 @@ public class HelloController implements Initializable {
         blogs.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         shop.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         usersButton.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        frontUserBtn.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
     }
 
     public void blogs(javafx.event.ActionEvent actionEvent) throws IOException {
@@ -118,6 +118,7 @@ public class HelloController implements Initializable {
         activities.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         shop.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         usersButton.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        frontUserBtn.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
     }
 
     public void shop(javafx.event.ActionEvent actionEvent) throws IOException {
@@ -137,11 +138,22 @@ public class HelloController implements Initializable {
         blogs.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         activities.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         usersButton.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        frontUserBtn.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
     }
 
-    private void handleBtnUtilisateur(javafx.event.ActionEvent actionEvent) {
-        System.out.println("Redirecting to gestion utilisateur");
-        loadScene("/userFront.fxml");
+    @FXML
+    private void user(javafx.event.ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/userFront.fxml"));
+        Parent fxml = loader.load();
+        contentArea.getChildren().removeAll();
+        contentArea.getChildren().setAll(fxml);
+
+        frontUserBtn.setStyle("-fx-background-color: #2A332D;-fx-text-fill:  #ffffff;");
+        home.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        blogs.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        activities.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        shop.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        usersButton.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
     }
 
     private void loadScene(String fxmlFile) {
@@ -171,6 +183,7 @@ public class HelloController implements Initializable {
         blogs.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         shop.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         activities.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        frontUserBtn.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
     }
 
 }

@@ -14,6 +14,7 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.User;
 import service.UserService;
@@ -26,6 +27,9 @@ import java.util.Map;
 import java.util.function.Predicate;
 
 public class ShowUserController {
+
+    @FXML
+    private AnchorPane mainPane;
 
     @FXML
     private Button btnBoutique;
@@ -144,16 +148,18 @@ public class ShowUserController {
             Parent root = loader.load();
 
             // Get the controller of the addCours.fxml
-            AddUserController addUserController = loader.getController();
-
+            AddUserController controller = loader.getController();
+            controller.setPane(mainPane);
+            mainPane.getChildren().clear();
+            mainPane.getChildren().setAll(root);
             // Show the add course window
-            Stage stage = new Stage();
+            /*Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.setTitle("Add User");
             stage.showAndWait();
 
             // After the add course window is closed, refresh the TableView
-            loadData(); // Reload the data from the database
+            loadData(); // Reload the data from the database*/
         } catch (IOException e) {
             e.printStackTrace(); // Handle any potential errors while loading the FXML file
         }
@@ -192,15 +198,18 @@ public class ShowUserController {
 
             // Set the showCoursController reference in the UpdateCoursController
             controller.setShowController(this);
+            controller.setPane(mainPane);
 
             // Get the selected course from the table
             User selectedUser = tableViewUser.getSelectionModel().getSelectedItem();
             if (selectedUser != null) {
                 controller.setselectedUser(selectedUser);
-                Stage stage = new Stage();
+                /*Stage stage = new Stage();
                 stage.setScene(new Scene(root));
                 stage.setTitle("Update Course");
-                stage.show();
+                stage.show();*/
+                mainPane.getChildren().clear();
+                mainPane.getChildren().setAll(root);
             } else {
                 showAlert("Please select a course to update.");
             }

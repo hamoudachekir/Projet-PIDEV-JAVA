@@ -160,7 +160,7 @@ public class ActivitiesDashboard implements Initializable,ActivityTableItem.Acti
                 if (selectedFiles != null) {
                     try {
                         ActivityImagesService activityImagesService = new ActivityImagesService();
-                        String destinationDirectory = "C:/Users/manna/IdeaProjects/pi/src/main/resources/assets/activityImages/";
+                        String destinationDirectory = "C:/Users/manna/IdeaProjects/Projet-PIDEV-JAVA2/Adventure-JAVA--main/src/main/resources/assets/activityImages/";
 
                         File destDir = new File(destinationDirectory);
                         if (!destDir.exists()) {
@@ -175,12 +175,14 @@ public class ActivitiesDashboard implements Initializable,ActivityTableItem.Acti
                             ActivityImages image = new ActivityImages(fileName, activityId);
                             activityImagesService.add(image);
                             System.out.println("File saved to: " + destinationPath);
+
                         }
+                        refreshActivities();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 }
-                refreshActivities();
+
 
 
                 nameField.clear();
@@ -214,7 +216,7 @@ public class ActivitiesDashboard implements Initializable,ActivityTableItem.Acti
 
     private void refreshActivities() {
         activitiesVbox.getChildren().clear();
-
+        System.out.println("activity box clear!");
         List<Activity> activities = new ArrayList<>();
         Connection connection = MyDataBase.getInstance().getConnection();
         ActivityService activityService = new ActivityService();

@@ -5,24 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ce2e9e1-d4e1-4c4d-87da-db0bf06e5e90" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/vue-arriere-du-couple-long-route-foret-femme-homme-aux-cheveux-longs-portant.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ActivityDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ActivityDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ActivitiesDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ActivitiesDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ActivityTableItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ActivityTableItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AddUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AddUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/back/Blog/AfficherCommentaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/back/Blog/AfficherCommentaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/back/Blog/AfficherPublicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/back/Blog/AfficherPublicationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/back/Blog/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/back/Blog/StatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/front/Blog/AfficherPublicationFrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/front/Blog/AfficherPublicationFrontController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/PdfGeneratorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PdfGeneratorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Back/Blog/AfficherPublication.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Back/Blog/AfficherPublication.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Front/Blog/AfficherPublicationF.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Front/Blog/AfficherPublicationF.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Front/Blog/DetailsPublicationF.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Front/Blog/DetailsPublicationF.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/adminProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/adminProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ShowUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ShowUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UpdateUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UpdateUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/addUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addUser.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hello-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/showUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/showUser.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/updateUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/updateUser.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/PdfGeneratorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/PdfGeneratorService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,26 +60,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.Adventure [javafx:run].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;user+blog+product+activities&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/manna/IdeaProjects/Projet-PIDEV-JAVA2/Adventure-JAVA--main/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.Adventure [javafx:run].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "user+blog+product+activities",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/manna/IdeaProjects/Projet-PIDEV-JAVA2/Adventure-JAVA--main/src/main/resources/assets/activityImages",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\manna\IdeaProjects\Projet-PIDEV-JAVA2\Adventure-JAVA--main\src\main\resources\assets\activityImages" />
       <recent name="C:\Users\manna\IdeaProjects\Projet-PIDEV-JAVA2\Adventure-JAVA--main\src\main\resources" />
       <recent name="C:\Users\manna\IdeaProjects\Projet-PIDEV-JAVA2\Adventure-JAVA--main\src\main\java\service" />
       <recent name="C:\Users\manna\IdeaProjects\Projet-PIDEV-JAVA2\Adventure-JAVA--main\src\main\java\model" />
@@ -148,7 +146,7 @@
       <workItem from="1715263431713" duration="491000" />
       <workItem from="1715264314511" duration="236000" />
       <workItem from="1715277219914" duration="2711000" />
-      <workItem from="1715299015343" duration="5059000" />
+      <workItem from="1715299015343" duration="8832000" />
     </task>
     <servers />
   </component>

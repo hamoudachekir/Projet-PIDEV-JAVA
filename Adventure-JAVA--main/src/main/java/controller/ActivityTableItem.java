@@ -72,8 +72,8 @@ public class ActivityTableItem {
         }
         if(!images.isEmpty()) {
             ActivityImages firstImage = images.get(0);
-            String imagePath = "file:///C:/Users/manna/IdeaProjects/pi/src/main/resources/assets/activityImages/" + firstImage.getUrl();
-            Image image1 = new Image(imagePath);
+            //String imagePath = "file:///C:/Users/manna/IdeaProjects/pi/src/main/resources/assets/activityImages/" + firstImage.getUrl();
+            Image image1 = new Image(getClass().getResourceAsStream("/assets/activityImages/" + firstImage.getUrl()));
             //System.out.println(imagePath);
             image.setImage(image1);
         }
