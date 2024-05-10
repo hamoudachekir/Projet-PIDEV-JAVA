@@ -16,7 +16,7 @@ public class ServiceProduct implements IService<Product> {
     }
 
     public void add(Product product) {
-        String qry = "INSERT INTO `product`(`category_id`, `name`, `description`, `price`, `image`) VALUES (?,?,?,?,?)";
+        String qry = "INSERT INTO `product`(`category_id`, `name`, `description`, `price`, `image`,`quantity`) VALUES (?,?,?,?,?,?)";
         try {
             PreparedStatement stm = cnx.prepareStatement(qry);
             stm.setInt(1, product.getCat_id());
@@ -24,6 +24,7 @@ public class ServiceProduct implements IService<Product> {
             stm.setString(3, product.getDescription());
             stm.setInt(4, product.getPrice());
             stm.setString(5, product.getImage());
+            stm.setInt(6, 5);
             stm.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());

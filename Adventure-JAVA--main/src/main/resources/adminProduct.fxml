@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminProductController">
+<AnchorPane fx:id="mainPane" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminProductController">
    <children>
       <TableView fx:id="tableView" layoutX="63.0" layoutY="114.0" prefHeight="265.0" prefWidth="574.0">
         <columns>
@@ -16,8 +16,9 @@
             <TableColumn fx:id="ImgTC" prefWidth="143.2000732421875" text="Image" />
         </columns>
       </TableView>
-      <Button layoutX="421.0" layoutY="406.0" mnemonicParsing="false" onAction="#DeleteProduct" prefHeight="41.0" prefWidth="110.0" styleClass="btn" stylesheets="@styles.css" text="Delete" />
-      <Button layoutX="290.0" layoutY="406.0" mnemonicParsing="false" onAction="#EditProduct" prefHeight="41.0" prefWidth="110.0" styleClass="btn" stylesheets="@styles.css" text="Edit" />
-      <Button layoutX="169.0" layoutY="406.0" mnemonicParsing="false" onAction="#showChart" prefHeight="41.0" prefWidth="110.0" styleClass="btn" stylesheets="@styles.css" text="Category Chart" />
+      <Button layoutX="480.0" layoutY="406.0" mnemonicParsing="false" onAction="#DeleteProduct" prefHeight="41.0" prefWidth="110.0" styleClass="btn" stylesheets="@styles.css" text="Delete" />
+      <Button layoutX="349.0" layoutY="406.0" mnemonicParsing="false" onAction="#EditProduct" prefHeight="41.0" prefWidth="110.0" styleClass="btn" stylesheets="@styles.css" text="Edit" />
+      <Button layoutX="228.0" layoutY="406.0" mnemonicParsing="false" onAction="#showChart" prefHeight="41.0" prefWidth="110.0" styleClass="btn" stylesheets="@styles.css" text="Category Chart" />
+      <Button layoutX="110.0" layoutY="406.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="41.0" prefWidth="110.0" styleClass="btn" stylesheets="@styles.css" text="Add" />
    </children>
 </AnchorPane>

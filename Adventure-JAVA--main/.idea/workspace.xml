@@ -5,21 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ce2e9e1-d4e1-4c4d-87da-db0bf06e5e90" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/activityImages/vue-arriere-du-couple-long-route-foret-femme-homme-aux-cheveux-longs-portant.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ActivitiesDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ActivitiesDashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ActivityTableItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ActivityTableItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/AddUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AddUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ShowUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ShowUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UpdateUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UpdateUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/addUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addUser.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/showUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/showUser.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/updateUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/updateUser.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ServiceProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ServiceProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AddProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AddProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/adminProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/adminProduct.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/PdfGeneratorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/PdfGeneratorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/LoginController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +141,7 @@
       <workItem from="1715263431713" duration="491000" />
       <workItem from="1715264314511" duration="236000" />
       <workItem from="1715277219914" duration="2711000" />
-      <workItem from="1715299015343" duration="8832000" />
+      <workItem from="1715299015343" duration="11070000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,8 @@ package controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -12,6 +14,7 @@ import javafx.stage.Stage;
 import model.User;
 import service.UserService;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class AddUserController {
@@ -120,15 +123,20 @@ public class AddUserController {
             userService.create(user);
             showAlert("User added successfully!", "Please enter a valid email address.");
 
-            // Get the stage associated with the addCoursBtn button and close it
+            /*// Get the stage associated with the addCoursBtn button and close it
             Stage stage = (Stage) addUserBtn.getScene().getWindow();
-            stage.close();
+            stage.close();*/
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/showUser.fxml"));
+            Parent fxml = loader.load();
+            pane.getChildren().clear();
+            pane.getChildren().add(fxml);
 
             // You may implement further actions here, like refreshing the view
         } catch (SQLException e) {
             showAlert("Failed to add cours: " + e.getMessage(), "Please enter a valid email address.");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-
 
 
     }

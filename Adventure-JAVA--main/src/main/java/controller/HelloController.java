@@ -42,6 +42,12 @@ public class HelloController implements Initializable {
     private Button shop;
     User currentUser;
     Boolean userIsAdmin ;
+    private Stage stage;
+
+    public void setLoginStage(Stage stage) {
+        this.stage = stage;
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         currentUser = LoginController.getCurrentUser();
@@ -171,7 +177,25 @@ public class HelloController implements Initializable {
     public void logout(javafx.event.ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) logoutB.getScene().getWindow();
         stage.close();
+        try {
+            //FXMLLoader loader = new FXMLLoader(getClass().getResource("/hello-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/login.fxml"));
+            Parent root = loader.load();
 
+            Scene scene = new Scene(root, 639, 400);
+
+            Image icon = new Image(getClass().getResourceAsStream("/Front/Blog/2.png"));
+            stage.getIcons().add(icon);
+
+            stage.setScene(scene);
+            stage.setTitle("Adventure");
+
+            stage.setResizable(false);
+
+            stage.show();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
     public void users(javafx.event.ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/showUser.fxml"));

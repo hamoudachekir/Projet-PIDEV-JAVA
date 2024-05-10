@@ -4,6 +4,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -13,6 +15,7 @@ import javafx.stage.Stage;
 import model.User;
 import service.UserService;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class UpdateUserController {
@@ -137,9 +140,14 @@ public class UpdateUserController {
             // Show success message
             showAlert("User updated successfully!");
 
-            // Close the window
+            /*// Close the window
             Stage stage = (Stage) updateemailuser.getScene().getWindow();
-            stage.close();
+            stage.close();*/
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/showUser.fxml"));
+            Parent fxml = loader.load();
+            pane.getChildren().clear();
+            pane.getChildren().add(fxml);
 
             // Refresh the table view if showCoursController is not null
             if (showUserController != null) {
@@ -149,6 +157,8 @@ public class UpdateUserController {
             }
         } catch (SQLException e) {
             showAlert("Failed to update User: " + e.getMessage());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
 
     }

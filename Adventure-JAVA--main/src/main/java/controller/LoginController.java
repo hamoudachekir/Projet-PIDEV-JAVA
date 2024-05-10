@@ -297,6 +297,8 @@ public class LoginController {
             Stage stage = new Stage();
             stage.setScene(new Scene(root,900,550));
             stage.setTitle("Adventure");
+            HelloController helloController = loader.getController();
+            helloController.setLoginStage(stage);
             stage.showAndWait();
         } catch (IOException e) {
             e.printStackTrace();
@@ -312,6 +314,8 @@ public class LoginController {
             Stage stage = new Stage();
             stage.setScene(new Scene(root,900,550));
             stage.setTitle("Adventure");
+            HelloController helloController = loader.getController();
+            helloController.setLoginStage(stage);
             stage.showAndWait();
         } catch (IOException e) {
             e.printStackTrace();
