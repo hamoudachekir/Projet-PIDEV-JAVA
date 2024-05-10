@@ -183,13 +183,10 @@ public class HelloController implements Initializable {
             Parent root = loader.load();
 
             Scene scene = new Scene(root, 639, 400);
-
-            Image icon = new Image(getClass().getResourceAsStream("/Front/Blog/2.png"));
-            stage.getIcons().add(icon);
-
             stage.setScene(scene);
             stage.setTitle("Adventure");
-
+            Image icon = new Image(getClass().getResourceAsStream("/Front/Blog/2.png"));
+            stage.getIcons().add(icon);
             stage.setResizable(false);
 
             stage.show();

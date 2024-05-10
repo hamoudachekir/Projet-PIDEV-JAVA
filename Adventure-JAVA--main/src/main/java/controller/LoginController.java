@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -297,6 +298,8 @@ public class LoginController {
             Stage stage = new Stage();
             stage.setScene(new Scene(root,900,550));
             stage.setTitle("Adventure");
+            Image icon = new Image(getClass().getResourceAsStream("/Front/Blog/2.png"));
+            stage.getIcons().add(icon);
             HelloController helloController = loader.getController();
             helloController.setLoginStage(stage);
             stage.showAndWait();
@@ -314,6 +317,8 @@ public class LoginController {
             Stage stage = new Stage();
             stage.setScene(new Scene(root,900,550));
             stage.setTitle("Adventure");
+            Image icon = new Image(getClass().getResourceAsStream("/Front/Blog/2.png"));
+            stage.getIcons().add(icon);
             HelloController helloController = loader.getController();
             helloController.setLoginStage(stage);
             stage.showAndWait();

@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ce2e9e1-d4e1-4c4d-87da-db0bf06e5e90" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ADVENTURELOGO.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/activitiesDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/activitiesDashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/activitiesDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/activitiesDashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/wishlist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/wishlist.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +140,7 @@
       <workItem from="1715263431713" duration="491000" />
       <workItem from="1715264314511" duration="236000" />
       <workItem from="1715277219914" duration="2711000" />
-      <workItem from="1715299015343" duration="11998000" />
+      <workItem from="1715299015343" duration="12960000" />
     </task>
     <servers />
   </component>

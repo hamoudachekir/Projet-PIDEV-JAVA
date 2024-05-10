@@ -64,14 +64,6 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="frontUserBtn" cancelButton="true" layoutX="10.0" layoutY="161.0" mnemonicParsing="false" onAction="#user" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1D231F;" text="My Account" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="12.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
                   <Button fx:id="usersButton" cancelButton="true" layoutX="10.0" layoutY="212.0" mnemonicParsing="false" onAction="#users" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1D231F;" text="Utilisateurs" textFill="WHITE" visible="false">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
@@ -80,8 +72,16 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <VBox alignment="BOTTOM_LEFT" prefHeight="135.0" prefWidth="202.0">
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="171.0" prefWidth="202.0">
                      <children>
+                        <Button fx:id="frontUserBtn" cancelButton="true" mnemonicParsing="false" onAction="#user" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1D231F;" text="My Account" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
                         <Button fx:id="logoutB" cancelButton="true" mnemonicParsing="false" onAction="#logout" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1D231F;" text="LogOut" textFill="WHITE">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
@@ -94,7 +94,7 @@
                   </VBox>
                </children>
                <padding>
-                  <Insets top="20.0" />
+                  <Insets top="30.0" />
                </padding>
             </VBox>
          </children>
