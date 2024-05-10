@@ -6,15 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="5ce2e9e1-d4e1-4c4d-87da-db0bf06e5e90" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ForgotPasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ForgotPasswordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ActivityDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ActivityDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Mail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/MainFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/MainFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/back/Blog/AfficherCommentaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/back/Blog/AfficherCommentaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/back/Blog/AfficherPublicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/back/Blog/AfficherPublicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/back/Blog/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/back/Blog/StatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/front/Blog/AfficherPublicationFrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/front/Blog/AfficherPublicationFrontController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/PdfGeneratorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PdfGeneratorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Back/Blog/AfficherPublication.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Back/Blog/AfficherPublication.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Front/Blog/AfficherPublicationF.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Front/Blog/AfficherPublicationF.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Front/Blog/DetailsPublicationF.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Front/Blog/DetailsPublicationF.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/adminProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/adminProduct.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/showUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/showUser.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/MainFX.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/MainFX.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +148,7 @@
       <workItem from="1715263431713" duration="491000" />
       <workItem from="1715264314511" duration="236000" />
       <workItem from="1715277219914" duration="2711000" />
+      <workItem from="1715299015343" duration="5059000" />
     </task>
     <servers />
   </component>

@@ -25,6 +25,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.Blog.Publication;
 import service.Blog.PublicationService;
@@ -36,6 +37,9 @@ public class AfficherPublicationController {
 
     @FXML
     private URL location;
+
+    @FXML
+    private AnchorPane mainPane;
 
     @FXML
     private TableColumn<Publication, String> titreCol;
@@ -140,9 +144,11 @@ public class AfficherPublicationController {
     }
     public void AfficherCommentaire(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Back/Blog/AfficherCommentaire.fxml"));
-        Parent root = (Parent) loader.load();
-        Stage stage = (Stage) welcomeLBL.getScene().getWindow();
-        stage.getScene().setRoot(root);
+        Parent fxml = loader.load();
+        AfficherCommentaire controller = loader.getController();
+        controller.setPane(mainPane);
+        mainPane.getChildren().removeAll();
+        mainPane.getChildren().setAll(fxml);
     }
     private void showAlert(String content) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

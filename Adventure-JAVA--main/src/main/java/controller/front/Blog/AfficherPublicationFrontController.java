@@ -25,7 +25,8 @@ public class AfficherPublicationFrontController {
 
     @FXML
     private FlowPane publicationFlowPane;
-
+    @FXML
+    private AnchorPane mainPane;
     @FXML
     private TextField searchTextField;
 
@@ -94,14 +95,9 @@ public class AfficherPublicationFrontController {
             try {
                 DetailsController.pub = publication;
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/Front/Blog/DetailsPublicationF.fxml"));
-                Parent root = loader.load();
-
-                Scene scene = new Scene(root);
-
-                Stage stage = new Stage();
-                stage.setScene(scene);
-
-                stage.show();
+                Parent fxml = loader.load();
+                mainPane.getChildren().removeAll();
+                mainPane.getChildren().setAll(fxml);
             } catch (IOException e) {
                 System.out.println("ttt"+e.getMessage());
             }

@@ -14,6 +14,7 @@ import javafx.scene.Parent;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.Blog.Commentaire;
 import service.Blog.CommentaireService;
@@ -33,6 +34,7 @@ public class StatisticsController {
     private PieChart commentsPieChart;
     @FXML
     private Button backButton;
+    private AnchorPane pane;
 
     CommentaireService cs = new CommentaireService();
 
@@ -57,8 +59,12 @@ public class StatisticsController {
     @FXML
     public void AfficherCommentaire (ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Back/Blog/AfficherCommentaire.fxml"));
-        Parent root = (Parent) loader.load();
-        Stage stage = (Stage) totalCommentsLabel.getScene().getWindow();
-        stage.getScene().setRoot(root);
+        Parent fxml = loader.load();
+        pane.getChildren().removeAll();
+        pane.getChildren().setAll(fxml);
+    }
+
+    public void setPane(AnchorPane pane) {
+        this.pane=pane;
     }
 }

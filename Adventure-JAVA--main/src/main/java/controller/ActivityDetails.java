@@ -56,9 +56,10 @@ public class ActivityDetails {
     @FXML
     private Button locationIcon;
     Activity activity;
-
+    User currentUser;
 
     public void setData(Activity activity) throws IOException {
+        currentUser = LoginController.getCurrentUser();
         Image icon = new Image(getClass().getResourceAsStream("/assets/darkLocation.png"));
         ImageView iconView = new ImageView(icon);
         locationIcon.setGraphic(iconView);
@@ -128,8 +129,9 @@ public class ActivityDetails {
         if(validateCommentFields()) {
             String commentText = comment.getText();
             int intRating = Integer.valueOf(rating.getText());
-
-            Comment newComment = new Comment("email@gmail.com", "aziz mannai", commentText, intRating, activity.getId());
+            String[] parts = currentUser.getEmail().split("@");
+            String name = parts[0];
+            Comment newComment = new Comment(currentUser.getEmail(), name, commentText, intRating, activity.getId());
 
             CommentService commentService = new CommentService();
 
@@ -150,7 +152,7 @@ public class ActivityDetails {
             Timestamp selectedDate = Timestamp.valueOf(date.getValue().atStartOfDay());
             int intNbrTickets = Integer.valueOf(nbrTickets.getText());
 
-            Reservation newReservation = new Reservation(selectedDate, intNbrTickets, "email@gmail.com", activity.getId(), "Pending");
+            Reservation newReservation = new Reservation(selectedDate, intNbrTickets, currentUser.getEmail(), activity.getId(), "Pending");
             ReservationService reservationService = new ReservationService();
 
             try {
@@ -172,7 +174,7 @@ public class ActivityDetails {
             qrcodeGeneratorService.createQrCode("http://localhost/reservations/Reservation_Details_"+formattedDate+".pdf");
             EmailService emailService = new EmailService();
             try {
-                emailService.sendEmail("mannaiomar28@gmail.com", tempFilePath);
+                emailService.sendEmail(currentUser.getEmail(), tempFilePath);
             } catch (MessagingException e) {
                 System.out.println("Failed to send email: " + e.getMessage());
             } catch (IOException e) {

@@ -21,41 +21,40 @@ public class PdfGeneratorService {
 
             try (PDPageContentStream contentStream = new PDPageContentStream(document, page)) {
 
-                File imageFile = new File("C:/Users/manna/OneDrive/Bureau/ADVENTURE.png");
+                File imageFile = new File("C:/Users/manna/IdeaProjects/Projet-PIDEV-JAVA2/Adventure-JAVA--main/src/main/resources/Front/Blog/2.png");
                 PDImageXObject image = PDImageXObject.createFromFileByContent(imageFile, document);
 
                 // Get the image dimensions
-                float imageWidth = image.getWidth();
-                float imageHeight = image.getHeight();
+                float imageWidth = 50;
+                float imageHeight = 50;
 
-                // Draw the image at the top-left corner
                 contentStream.drawImage(image, 20, PDRectangle.LETTER.getHeight() - 20 - imageHeight, imageWidth, imageHeight);
 
                 contentStream.beginText();
                 contentStream.setFont(PDType1Font.HELVETICA_BOLD, 18);
-                contentStream.newLineAtOffset(100, 750);
+                contentStream.newLineAtOffset(100, 700);
                 contentStream.showText("Reservation Details");
                 contentStream.endText();
 
 
                 contentStream.beginText();
                 contentStream.setFont(PDType1Font.HELVETICA, 12);
-                contentStream.newLineAtOffset(100, 700);
+                contentStream.newLineAtOffset(100, 650);
                 contentStream.setLeading(14);
                 contentStream.showText(activity);
                 contentStream.endText();
 
                 contentStream.beginText();
-                contentStream.setFont(PDType1Font.HELVETICA, 12); // Content font size
-                contentStream.newLineAtOffset(100, 680); // Content position
-                contentStream.setLeading(14); // Line spacing
+                contentStream.setFont(PDType1Font.HELVETICA, 12);
+                contentStream.newLineAtOffset(100, 630);
+                contentStream.setLeading(14);
                 contentStream.showText("Email : "+reservation.getUserEmail());
                 contentStream.endText();
 
                 contentStream.beginText();
-                contentStream.setFont(PDType1Font.HELVETICA, 12); // Content font size
-                contentStream.newLineAtOffset(100, 660); // Content position
-                contentStream.setLeading(14); // Line spacing
+                contentStream.setFont(PDType1Font.HELVETICA, 12);
+                contentStream.newLineAtOffset(100, 610);
+                contentStream.setLeading(14);
                 contentStream.showText("Tickets : "+reservation.getNbrTickets());
                 contentStream.endText();
 
@@ -63,9 +62,9 @@ public class PdfGeneratorService {
                 String formattedDate = reservation.getDate().toLocalDateTime().format(formatter);
 
                 contentStream.beginText();
-                contentStream.setFont(PDType1Font.HELVETICA, 12); // Content font size
-                contentStream.newLineAtOffset(100, 640); // Content position
-                contentStream.setLeading(14); // Line spacing
+                contentStream.setFont(PDType1Font.HELVETICA, 12);
+                contentStream.newLineAtOffset(100, 590);
+                contentStream.setLeading(14);
                 contentStream.showText("Date : "+formattedDate);
                 contentStream.endText();
             }

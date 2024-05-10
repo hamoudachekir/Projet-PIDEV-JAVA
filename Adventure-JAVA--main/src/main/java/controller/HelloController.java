@@ -35,15 +35,26 @@ public class HelloController implements Initializable {
 
     @FXML
     private Button home;
+    @FXML
+    private Button usersButton;
 
     @FXML
     private Button shop;
     User currentUser;
-
+    Boolean userIsAdmin ;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         currentUser = LoginController.getCurrentUser();
-        //System.out.println(currentUser.getRoles());
+        String userRolesJson = currentUser.getRoles();
+        String expectedRoleJson = "{\"role\": \"client\"}";
+        if (userRolesJson.equals(expectedRoleJson))
+            userIsAdmin=false;
+        else
+            userIsAdmin=true;
+
+        if(userIsAdmin)
+            usersButton.setVisible(true);
+
         frontUserBtn.setOnAction(this::handleBtnUtilisateur);
         try {
             Parent fxml = FXMLLoader.load(getClass().getResource("/home.fxml"));
@@ -66,6 +77,7 @@ public class HelloController implements Initializable {
         activities.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         blogs.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         shop.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        usersButton.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
     }
 
     public void activities(javafx.event.ActionEvent actionEvent) throws IOException {
@@ -86,6 +98,45 @@ public class HelloController implements Initializable {
         home.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         blogs.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
         shop.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        usersButton.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+    }
+
+    public void blogs(javafx.event.ActionEvent actionEvent) throws IOException {
+        if (userIsAdmin) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Back/Blog/AfficherPublication.fxml"));
+            Parent fxml = loader.load();
+            contentArea.getChildren().removeAll();
+            contentArea.getChildren().setAll(fxml);
+        }else{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Front/Blog/AfficherPublicationF.fxml"));
+            Parent fxml = loader.load();
+            contentArea.getChildren().removeAll();
+            contentArea.getChildren().setAll(fxml);
+        }
+        blogs.setStyle("-fx-background-color: #2A332D;-fx-text-fill:  #ffffff;");
+        home.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        activities.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        shop.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        usersButton.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+    }
+
+    public void shop(javafx.event.ActionEvent actionEvent) throws IOException {
+        if (userIsAdmin) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/adminProduct.fxml"));
+            Parent fxml = loader.load();
+            contentArea.getChildren().removeAll();
+            contentArea.getChildren().setAll(fxml);
+        }else{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/ShowProduct.fxml"));
+            Parent fxml = loader.load();
+            contentArea.getChildren().removeAll();
+            contentArea.getChildren().setAll(fxml);
+        }
+        shop.setStyle("-fx-background-color: #2A332D;-fx-text-fill:  #ffffff;");
+        home.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        blogs.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        activities.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        usersButton.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
     }
 
     private void handleBtnUtilisateur(javafx.event.ActionEvent actionEvent) {
@@ -97,7 +148,7 @@ public class HelloController implements Initializable {
         try {
             Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));
             Stage stage = new Stage();
-            stage.setTitle("Ziyara");
+            stage.setTitle("Adventure");
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
@@ -109,6 +160,17 @@ public class HelloController implements Initializable {
         Stage stage = (Stage) logoutB.getScene().getWindow();
         stage.close();
 
+    }
+    public void users(javafx.event.ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/showUser.fxml"));
+        Parent fxml = loader.load();
+        contentArea.getChildren().removeAll();
+        contentArea.getChildren().setAll(fxml);
+        usersButton.setStyle("-fx-background-color: #2A332D;-fx-text-fill:  #ffffff;");
+        home.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        blogs.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        shop.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
+        activities.setStyle("-fx-background-color: #1D231F;-fx-text-fill:  #ffffff;");
     }
 
 }

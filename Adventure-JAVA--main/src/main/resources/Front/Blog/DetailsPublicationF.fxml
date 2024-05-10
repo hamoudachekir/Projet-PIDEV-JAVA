@@ -1,87 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="737.0" styleClass="post-background" stylesheets="@../../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.front.Blog.DetailsController">
-    <top>
-        <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="737.0" BorderPane.alignment="CENTER_LEFT">
-            <children>
-                <Label alignment="CENTER" prefHeight="59.0" prefWidth="158.0" text="Adventure">
-                    <font>
-                        <Font name="Bell MT" size="35.0" />
-                    </font>
-                </Label>
-                <Separator orientation="VERTICAL" prefHeight="200.0" />
-                <HBox alignment="CENTER" prefHeight="42.0" prefWidth="274.0">
-                    <children>
-                        <TextField prefHeight="32.0" prefWidth="198.0" promptText="Search" styleClass="round-layout" />
-                    </children>
-                    <cursor>
-                        <Cursor fx:constant="DEFAULT" />
-                    </cursor></HBox>
-                <Separator orientation="VERTICAL" prefHeight="200.0" />
-                <Pane prefHeight="72.0" prefWidth="267.0">
-                    <children>
-                        <Label layoutX="14.0" layoutY="14.0" prefHeight="38.0" prefWidth="160.0" text="UserName">
-                            <font>
-                                <Font name="System Bold" size="16.0" />
-                            </font>
-                        </Label>
-                        <ImageView fitHeight="56.0" fitWidth="61.0" layoutX="204.0" pickOnBounds="true" preserveRatio="true">
-                        </ImageView>
-                    </children>
-                </Pane>
-            </children>
-        </HBox>
-    </top>
-    <left>
-        <VBox prefHeight="544.0" prefWidth="157.0" BorderPane.alignment="CENTER">
-            <children>
-                <VBox prefHeight="578.0" prefWidth="158.0" style="-fx-background-color: #90EE90;">
-                    <children>
-                        <Label alignment="CENTER" prefHeight="38.0" prefWidth="150.0" text="Les gestions">
-                            <font>
-                                <Font name="System Bold" size="16.0" />
-                            </font>
-                        </Label>
-                        <Separator prefWidth="200.0" />
-                        <Separator prefWidth="200.0" />
-                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="157.0">
-                            <children>
-                                <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@36.jpg" />
-                                    </image>
-                                </ImageView>
-                                <Label alignment="CENTER" prefHeight="43.0" prefWidth="111.0" text="Blog" textAlignment="CENTER">
-                                    <font>
-                                        <Font name="System Bold" size="16.0" />
-                                    </font>
-                                </Label>
-                            </children>
-                        </HBox>
-                    </children>
-                    <opaqueInsets>
-                        <Insets />
-                    </opaqueInsets>
-                </VBox>
-            </children>
-        </VBox>
-    </left>
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" styleClass="post-background" stylesheets="@../../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.front.Blog.DetailsController">
     <center>
         <Pane prefHeight="425.0" prefWidth="473.0" styleClass="post-background" stylesheets="@../../styles.css" BorderPane.alignment="CENTER">
             <children>

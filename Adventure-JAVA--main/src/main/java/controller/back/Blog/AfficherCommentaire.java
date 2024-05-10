@@ -15,9 +15,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.Blog.Commentaire;
 import model.Blog.Publication;
@@ -43,6 +45,7 @@ public class AfficherCommentaire {
     private TableColumn<Commentaire, String> descriptionCol;
     CommentaireService cs = new CommentaireService();
     ObservableList<Commentaire> obsC;
+    private AnchorPane pane;
     @FXML
     void cd107b(ActionEvent event) {
     }
@@ -72,9 +75,9 @@ public class AfficherCommentaire {
     }
     public void afficherPublication(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Back/Blog/AfficherPublication.fxml"));
-        Parent root = (Parent) loader.load();
-        Stage stage = (Stage) Welcome.getScene().getWindow();
-        stage.getScene().setRoot(root);
+        Parent fxml = loader.load();
+        pane.getChildren().removeAll();
+        pane.getChildren().setAll(fxml);
     }
     public void setData(String msg){
         Welcome.setText("Welcome" + msg);
@@ -82,8 +85,14 @@ public class AfficherCommentaire {
     @FXML
     void afficherStatistiques(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Back/Blog/statisticsCommentaire.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) Welcome.getScene().getWindow();
-        stage.setScene(new Scene(root));
+        Parent fxml = loader.load();
+        StatisticsController controller = loader.getController();
+        controller.setPane(pane);
+        pane.getChildren().removeAll();
+        pane.getChildren().setAll(fxml);
+    }
+
+    public void setPane(AnchorPane pane) {
+        this.pane=pane;
     }
 }

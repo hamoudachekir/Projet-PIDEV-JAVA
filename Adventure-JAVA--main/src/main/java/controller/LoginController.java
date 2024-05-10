@@ -295,8 +295,8 @@ public class LoginController {
             /*FrontController controller = loader.getController();
             controller.displayEmail(email);*/
             Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Ziyara");
+            stage.setScene(new Scene(root,900,550));
+            stage.setTitle("Adventure");
             stage.showAndWait();
         } catch (IOException e) {
             e.printStackTrace();
@@ -310,8 +310,8 @@ public class LoginController {
             Parent root = loader.load();
             //BackController controller = loader.getController();
             Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Ziyara");
+            stage.setScene(new Scene(root,900,550));
+            stage.setTitle("Adventure");
             stage.showAndWait();
         } catch (IOException e) {
             e.printStackTrace();
