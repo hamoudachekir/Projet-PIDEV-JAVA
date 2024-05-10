@@ -168,7 +168,7 @@
                                     <Insets left="15.0" />
                                  </VBox.margin>
                               </Label>
-                              <HBox prefHeight="138.0" prefWidth="622.0" spacing="50.0">
+                              <HBox alignment="TOP_CENTER" prefHeight="178.0" prefWidth="586.0" spacing="50.0">
                                  <children>
                                     <VBox prefHeight="182.0" prefWidth="225.0" spacing="7.0">
                                        <children>
@@ -195,13 +195,10 @@
                                        </HBox.margin>
                                     </VBox>
                                  </children>
-                                 <VBox.margin>
-                                    <Insets left="15.0" />
-                                 </VBox.margin>
                               </HBox>
-                              <Button onAction="#addActivity" prefHeight="30.0" prefWidth="498.0" stylesheets="@styleActivities.css" text="Add Activity">
+                              <Button alignment="CENTER" contentDisplay="CENTER" onAction="#addActivity" prefHeight="26.0" prefWidth="502.0" stylesheets="@styleActivities.css" text="Add Activity">
                                  <VBox.margin>
-                                    <Insets left="15.0" />
+                                    <Insets left="60.0" />
                                  </VBox.margin>
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
