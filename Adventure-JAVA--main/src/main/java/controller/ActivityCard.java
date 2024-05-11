@@ -65,7 +65,8 @@ public class ActivityCard {
         }
         if(!images.isEmpty()){
             ActivityImages firstImage = images.get(0);
-            Image image1 = new Image(getClass().getResourceAsStream("/assets/activityImages/" + firstImage.getUrl()));
+            //Image image1 = new Image(getClass().getResourceAsStream("/assets/activityImages/" + firstImage.getUrl()));
+            Image image1= new Image("C:/Users/manna/adventure-web/public/assets/uploads/activities/"+firstImage.getUrl());
             image.setImage(image1);
         }
 

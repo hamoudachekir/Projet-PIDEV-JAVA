@@ -139,16 +139,16 @@ public class ActivitiesDashboard implements Initializable,ActivityTableItem.Acti
     @FXML
     private void addActivity(javafx.event.ActionEvent actionEvent) {
         if(validateActivity()) {
-        String name = nameField.getText();
-        String location = locationn.getText();
-        String activityType = type.getText();
-        String activityDescription = desc.getText();
-        int activityDuration = Integer.parseInt(duration.getText());
-        int maxGuestsValue = Integer.parseInt(maxGuests.getText());
-        int minAgeValue = Integer.parseInt(minAge.getText());
-        float activityPrice = Float.parseFloat(price.getText());
+            String name = nameField.getText();
+            String location = locationn.getText();
+            String activityType = type.getText();
+            String activityDescription = desc.getText();
+            int activityDuration = Integer.parseInt(duration.getText());
+            int maxGuestsValue = Integer.parseInt(maxGuests.getText());
+            int minAgeValue = Integer.parseInt(minAge.getText());
+            float activityPrice = Float.parseFloat(price.getText());
 
-        Activity newActivity = new Activity(name, location, activityPrice, activityType,
+            Activity newActivity = new Activity(name, location, activityPrice, activityType,
                 activityDescription, maxGuestsValue, minAgeValue, activityDuration);
 
 
@@ -160,7 +160,7 @@ public class ActivitiesDashboard implements Initializable,ActivityTableItem.Acti
                 if (selectedFiles != null) {
                     try {
                         ActivityImagesService activityImagesService = new ActivityImagesService();
-                        String destinationDirectory = "C:/Users/manna/IdeaProjects/Projet-PIDEV-JAVA2/Adventure-JAVA--main/src/main/resources/assets/activityImages/";
+                        String destinationDirectory = "C:/Users/manna/adventure-web/public/assets/uploads/activities/";
 
                         File destDir = new File(destinationDirectory);
                         if (!destDir.exists()) {
@@ -177,7 +177,7 @@ public class ActivitiesDashboard implements Initializable,ActivityTableItem.Acti
                             System.out.println("File saved to: " + destinationPath);
 
                         }
-                        refreshActivities();
+
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -196,6 +196,7 @@ public class ActivitiesDashboard implements Initializable,ActivityTableItem.Acti
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+            refreshActivities();
         }
     }
 

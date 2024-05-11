@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Adventure:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ce2e9e1-d4e1-4c4d-87da-db0bf06e5e90" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ActivitiesDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ActivitiesDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ActivityCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ActivityCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ActivityTableItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ActivityTableItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ImageSlider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ImageSlider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/wishlist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/wishlist.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/back/Blog/AfficherPublicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/back/Blog/AfficherPublicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/front/Blog/AfficherPublicationFrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/front/Blog/AfficherPublicationFrontController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/front/Blog/DetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/front/Blog/DetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Front/Blog/DetailsPublicationF.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Front/Blog/DetailsPublicationF.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Front/Blog/DetailsPublicationF.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Front/Blog/DetailsPublicationF.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/back/Blog/AfficherPublicationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/back/Blog/AfficherPublicationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/front/Blog/AfficherPublicationFrontController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/front/Blog/AfficherPublicationFrontController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/front/Blog/DetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/front/Blog/DetailsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/MainFX.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/MainFX.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,24 +67,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.Adventure [javafx:run].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "user+blog+product+activities",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/manna/IdeaProjects/Projet-PIDEV-JAVA2/Adventure-JAVA--main/src/main/resources/assets",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainFX.executor&quot;: &quot;Run&quot;,
+    &quot;JAR Application.Adventure.jar.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Adventure [javafx:run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;user+blog+product+activities&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/manna/Downloads/Compressed/javafx-sdk-22/bin/vcruntime140_1.dll&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\manna\IdeaProjects\Projet-PIDEV-JAVA2\Adventure-JAVA--main\src\main\resources\assets" />
@@ -82,6 +101,10 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="Adventure.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/Adventure_jar/Adventure.jar" />
+      <method v="2" />
+    </configuration>
     <configuration name="Adventure [javafx:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -114,6 +137,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.Adventure.jar" />
         <item itemvalue="Maven.Adventure [javafx:run]" />
       </list>
     </recent_temporary>
@@ -141,6 +165,11 @@
       <workItem from="1715264314511" duration="236000" />
       <workItem from="1715277219914" duration="2711000" />
       <workItem from="1715299015343" duration="12960000" />
+      <workItem from="1715316307044" duration="2327000" />
+      <workItem from="1715330602686" duration="4299000" />
+      <workItem from="1715341725229" duration="837000" />
+      <workItem from="1715364472599" duration="852000" />
+      <workItem from="1715428035926" duration="5967000" />
     </task>
     <servers />
   </component>

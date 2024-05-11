@@ -12,6 +12,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Blog.Publication;
 import service.Blog.PublicationService;
@@ -74,6 +75,11 @@ public class AfficherPublicationFrontController {
         Label contenuLabel = new Label("Contenu: " + publication.getContenu());
         contenuLabel.setLayoutX(15);
         contenuLabel.setLayoutY(85);
+        contenuLabel.setWrapText(true);
+        contenuLabel.setMaxWidth(150);
+
+
+
         contenuLabel.getStyleClass().add("publication-contenu");
 
         File file = new File(publication.getImage());

@@ -117,12 +117,13 @@ public class AfficherPublicationController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Back/Blog/updatePublication.fxml"));
             try {
                 Parent root = loader.load();
-                dialog.getDialogPane().setContent(root);
+                //dialog.getDialogPane().setContent(root);
                 ModifierPublicationController modifierPubController = loader.getController();
                 modifierPubController.setData(selectedPublication.getId());
-
-                Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
-                stage.setUserData(this);
+                mainPane.getChildren().removeAll();
+                mainPane.getChildren().setAll(root);
+                //Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
+                //stage.setUserData(this);
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -138,9 +139,12 @@ public class AfficherPublicationController {
 
     public void addpublication(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Back/Blog/Addpublication.fxml"));
-        Parent root = (Parent) loader.load();
+        /*Parent root = (Parent) loader.load();
         Stage stage = (Stage) welcomeLBL.getScene().getWindow();
-        stage.getScene().setRoot(root);
+        stage.getScene().setRoot(root);*/
+        Parent fxml = loader.load();
+        mainPane.getChildren().removeAll();
+        mainPane.getChildren().setAll(fxml);
     }
     public void AfficherCommentaire(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Back/Blog/AfficherCommentaire.fxml"));

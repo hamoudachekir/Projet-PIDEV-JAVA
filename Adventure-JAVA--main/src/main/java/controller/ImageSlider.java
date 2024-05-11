@@ -15,6 +15,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 import model.ActivityImages;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,14 +40,20 @@ public class ImageSlider {
     public void setImages(List<ActivityImages> images) {
         System.out.println(images);
         for (ActivityImages image : images) {
-            addImageView("/assets/activityImages/" + image.getUrl());
+            addImageView(image.getUrl());
+            System.out.println(image.getUrl());
         }
         updateImage();
     }
     public void addImageView(String path) {
-        Image image = new Image(getClass().getResourceAsStream(path));
-        ImageView imageView = new ImageView(image);
-        images.add(imageView.getImage());
+        File file = new File("C:/Users/manna/adventure-web/public/assets/uploads/activities/" + path);
+        if (file.exists()) {
+            Image image = new Image(file.toURI().toString());
+            ImageView imageView = new ImageView(image);
+            images.add(imageView.getImage());
+        } else {
+            System.out.println("Image file does not exist at path: " + file.getAbsolutePath());
+        }
     }
 
 

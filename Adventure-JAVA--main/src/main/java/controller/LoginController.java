@@ -269,8 +269,8 @@ public class LoginController {
                 } else if (user.getRoles().contains("client")) {
                     // Insert into statuser table
                     LocalDate currentDate = LocalDate.now();
-                    Statuser statuser = new Statuser(user.getId(), currentDate);
-                    statuserService.create(statuser); // Assuming you have a method to insert a Statuser object into the database
+                    //Statuser statuser = new Statuser(user.getId(), currentDate);
+                    //statuserService.create(statuser); // Assuming you have a method to insert a Statuser object into the database
                     System.out.println("Redirecting to client site...");
                     closeLoginInterface();
                     loadFront(email);

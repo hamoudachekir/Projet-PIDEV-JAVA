@@ -173,10 +173,11 @@ public class DetailsController implements Initializable {
     void likeButtonClicked() throws SQLException {
         // Increment the likes count
         PublicationService pubServ = new PublicationService();
-        likesCount++;
         pubServ.incrementLikes(pub.getId());
+
         // Update the likesLabel text
-        likesLabel.setText(String.valueOf(pub.getLikes()+1));
+        pub.setLikes(pub.getLikes() + 1);
+        likesLabel.setText(String.valueOf(pub.getLikes()));
     }
     @FXML
     void Translate(ActionEvent event) throws IOException {
